@@ -7,22 +7,41 @@ public class main {
 
     public static void main(String[] args) {
 
+        /*Personnage[] personnages = new Personnage[20];
+        int index = 0;*/
+
+        System.out.println("        ,     \\    /      ,        \n" +
+                "       / \\    )\\__/(     / \\       \n" +
+                "      /   \\  (_\\  /_)   /   \\      \n" +
+                " ____/_____\\__\\@  @/___/_____\\____ \n" +
+                "|             |\\../|              |\n" +
+                "|              \\VV/               |\n" +
+                "|        Donjons et Dragons        |\n" +
+                "|_________________________________ |\n" +
+                " |    /\\ /      \\\\       \\ /\\    | \n" +
+                " |  /   V        ))       V   \\  | \n" +
+                " |/     `       //        '     \\| \n" +
+                " `              V                '");
+
+        try {
+            play();
+        } catch (java.util.InputMismatchException e) {
+            System.out.println("!!! - Erreur, ce n'est pas un entier - !!!");
+            play();
+        }
+    }
+
+    public static void play() {
         Scanner sc = new Scanner(System.in);
 
-/*      ArrayList<Personnage> personnages = new ArrayList<Personnage>();
+        ArrayList<Personnage> personnages = new ArrayList<Personnage>();
         Arme test = new Arme("hache", 15);
         personnages.add(new Guerrier("Jean", "img", 10, 10, test));
         personnages.add(new Guerrier("Edouard", "img", 10, 10, test));
-*/
-
-        Personnage[] personnages = new Personnage[20];
-        int index = 0;
-
         boolean playGame = true;
-
         while (playGame == true) {
 
-            System.out.println("Donjon et dragons, menu:");
+            System.out.println("Donjons et dragons, menu:");
             System.out.println("1 - Créer un Personnage.");
             System.out.println("2 - Liste des Personnages.");
             System.out.println("3 - Modifier un Personnage.");
@@ -38,82 +57,78 @@ public class main {
                     while (keepCreate == true) {
 
                         System.out.println("Veuillez choisir votre classe ( Guerrier -> 1 / Magicien -> 2 )");
-
-
                         int choice = sc.nextInt();
-                        //ici le joueur choisis sa classe
                         sc.nextLine();
+                        boolean keepAsking = true;
 
-                        if (choice == 1) {
-                            //cas Guerrier
-                            System.out.println("Veuillez saisir votre nom :");
-                            String nom = sc.nextLine();
+                        switch (choice) {
+                            case 1:
+                                //cas Guerrier
+                                System.out.println("Veuillez saisir votre nom :");
+                                String nom = sc.nextLine();
 
-                            System.out.println("Veuillez saisir votre image :");
-                            String img = sc.nextLine();
+                                System.out.println("Veuillez saisir votre image :");
+                                String img = sc.nextLine();
+                                System.out.println("Veuillez saisir votre arme :");
+                                String weapon = sc.nextLine();
 
-                            System.out.println("Veuillez saisir votre arme :");
-                            String armeName = sc.nextLine();
+                                System.out.println("Veuillez saisir la puissance de votre arme :");
+                                int power = sc.nextInt();
+                                sc.nextLine();
 
-                            System.out.println("Veuillez saisir la puissance de votre arme :");
-                            int armePuissance = sc.nextInt();
-                            sc.nextLine();
+                                personnages.add(new Guerrier(nom, img, 10, 10, new Arme(weapon, power)));
 
-                            //personnages.add(new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance)));
-
-                            personnages[index] = new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance));
+                            /*personnages[index] = new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance));
                             System.out.println(personnages[index].toString());
-                            index++;
+                            index++;*/
+
+                                while (keepAsking == true) {
+                                    boolean temp[] = keepCreating(keepCreate, keepAsking);
+                                    keepCreate = temp[0];
+                                    keepAsking = temp[1];
+                                }
+                                break;
+
+                            case 2:
+                                //cas Magicien
+                                System.out.println("Veuillez saisir votre nom :");
+                                String nomMagicien = sc.nextLine();
+
+                                System.out.println("Veuillez saisir votre image :");
+                                String imgMagicien = sc.nextLine();
 
 
+                                System.out.println("Veuillez saisir le nom de votre sort :");
+                                String spell = sc.nextLine();
 
-                            System.out.println("Voulez vous créer un autre Personnage ? ( oui / non ) ");
-                            String keepCreateChoice = sc.nextLine();
+                                System.out.println("Veuillez saisir la puissance de votre sort :");
+                                int spellPower = sc.nextInt();
+                                sc.nextLine();
 
-                            if (("non").equals(keepCreateChoice)) {
-                                keepCreate = false;
-                            }
-                        } else {
-                            //cas Magicien
-                            System.out.println("Veuillez saisir votre nom :");
-                            String nom = sc.nextLine();
+                                personnages.add(new Magicien(nomMagicien, imgMagicien, 6, 15, new Sort(spell, spellPower)));
 
-                            System.out.println("Veuillez saisir votre image :");
-                            String img = sc.nextLine();
-
-                            System.out.println("Veuillez saisir le nom de votre sort :");
-                            String sortName = sc.nextLine();
-
-                            System.out.println("Veuillez saisir la puissance de votre sort :");
-                            int sortPuissance = sc.nextInt();
-                            sc.nextLine();
-
-                            //personnages.add(new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance)));
-
-                            personnages[index] = new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance));
+                            /*personnages[index] = new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance));
                             System.out.println(personnages[index].toString());
-                            index++;
+                            index++;*/
 
+                                while (keepAsking == true) {
+                                    boolean temp[] = keepCreating(keepCreate, keepAsking);
+                                    keepCreate = temp[0];
+                                    keepAsking = temp[1];
+                                }
+                                break;
 
-                            System.out.println("Voulez vous créer un autre Personnage ? ( oui / non ) ");
-                            String keepCreateChoice = sc.nextLine();
-
-                            if (("non").equals(keepCreateChoice)) {
-                                keepCreate = false;
-                            }
+                            default:
+                                System.out.println("Veuillez saisir un numéro valide !! ( Guerrier -> 1 / Mag1icien -> 2 ) ");
+                                break;
                         }
                     }
                     break;
-                /*case 2:
-                    System.out.println("Liste des personnages :");
-
-                        for (int i = 0; i < personnages.size(); i++) {
-                            System.out.print("(id = " + i + ") ");
-                            System.out.println(personnages.get(i));
-                        }
-
+                case 2:
+                    displayList(personnages);
                     break;
                 case 3:
+                    displayList(personnages);
                     System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.size() - 1) + ")");
                     int editChoice = sc.nextInt();
                     Personnage temp = personnages.get(editChoice);
@@ -127,7 +142,7 @@ public class main {
                     int editChoiceBis = sc.nextInt();
                     sc.nextLine();
 
-                    switch (editChoiceBis){
+                    switch (editChoiceBis) {
                         case 1:
                             System.out.println("Veuillez saisir le nouveau nom :");
                             String nom = sc.nextLine();
@@ -145,9 +160,45 @@ public class main {
                     break;
                 case 4:
                     playGame = false;
-                    break;*/
+                    sc.close();
+                    break;
+                default:
+                    System.out.println("!!! - Veuillez choisir un numéro valide - !!! (1 / 2 / 3 / 4) ");
+                    break;
             }
-            System.out.println();
         }
+    }
+
+    public static void displayList(ArrayList tab) {
+        System.out.println("Liste des personnages :");
+
+        for (int i = 0; i < tab.size(); i++) {
+            System.out.print("(id = " + i + ") ");
+            System.out.println(tab.get(i));
+        }
+    }
+
+    public static boolean[] keepCreating(boolean keepCreate, boolean keepAsking) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean[] temp = new boolean[2];
+
+        System.out.println("Voulez vous créer un autre Personnage ? ( oui / non ) ");
+        String keepCreateChoice = sc.nextLine();
+
+        switch (keepCreateChoice) {
+            case "oui":
+                temp[0] = true;
+                temp[1] = false;
+                break;
+            case "non":
+                temp[0] = false;
+                temp[1] = false;
+                break;
+            default:
+                System.out.println("!!! - Veuillez saisir une réponse valide ( oui / non ) - !!!");
+                break;
+        }
+        return temp;
     }
 }

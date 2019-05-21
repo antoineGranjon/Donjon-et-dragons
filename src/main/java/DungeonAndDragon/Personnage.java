@@ -1,5 +1,6 @@
 package DungeonAndDragon;
 
+
 public abstract class Personnage {
 
     private String nom;
@@ -7,15 +8,23 @@ public abstract class Personnage {
     private int vie;
     private int force;
 
-    public Personnage(){
+    public Personnage() {
 
     }
 
-    public Personnage(String name){
+    public Personnage(String name) {
         this.nom = name;
     }
 
-    public Personnage(String nom, String image, int vie, int force){
+    /**
+     *
+     * @param nom
+     * @param image
+     * @param vie
+     * @param force
+     */
+    public Personnage(String nom, String image, int vie, int force) {
+
         this.nom = nom;
         this.image = image;
         this.vie = vie;
@@ -38,8 +47,15 @@ public abstract class Personnage {
         this.image = image;
     }
 
+    public int getVie() {
+        return vie;
+    }
+
+    public int getForce() {
+        return force;
+    }
 
     public String toString() {
-        return "Classe : "+ this.getClass().getSimpleName() +" , nom: " + nom + ", image: " + image + ", points de vie : " + vie + ", force: " + force + ". " ;
+        return "Classe : " + this.getClass().getSimpleName() + " | Nom: " + nom + " | Image: " + image + "| Points de vie : " + vie + "| Force: " + force + " | ";
     }
 }

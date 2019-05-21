@@ -5,12 +5,34 @@ public class Arme {
     private String nom;
     private int puissance;
 
-    public Arme(String nom, int puissance){
+    /**
+     *
+     * @param nom
+     * @param puissance
+     */
+    public Arme(String nom, int puissance) {
         this.nom = nom;
         this.puissance = puissance;
     }
 
-    public String toString(){
-        return "mon arme est: " + nom + " et elle à une puissance de: " + puissance;
+    public String getNom() {
+        return nom;
     }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getPuissance() {
+        return puissance;
+    }
+
+    public void setPuissance(int puissance) {
+        this.puissance = puissance;
+    }
+
+    public String toString() {
+        return "Arme: " + nom + " | Puissance: " + puissance;
+    }
+
 }
