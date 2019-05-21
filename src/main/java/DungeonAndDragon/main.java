@@ -8,10 +8,15 @@ public class main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        ArrayList<Personnage> personnages = new ArrayList<Personnage>();
+
+/*      ArrayList<Personnage> personnages = new ArrayList<Personnage>();
         Arme test = new Arme("hache", 15);
         personnages.add(new Guerrier("Jean", "img", 10, 10, test));
         personnages.add(new Guerrier("Edouard", "img", 10, 10, test));
+*/
+
+        Personnage[] personnages = new Personnage[20];
+        int index = 0;
 
         boolean playGame = true;
 
@@ -33,6 +38,8 @@ public class main {
                     while (keepCreate == true) {
 
                         System.out.println("Veuillez choisir votre classe ( Guerrier -> 1 / Magicien -> 2 )");
+
+
                         int choice = sc.nextInt();
                         //ici le joueur choisis sa classe
                         sc.nextLine();
@@ -52,7 +59,13 @@ public class main {
                             int armePuissance = sc.nextInt();
                             sc.nextLine();
 
-                            personnages.add(new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance)));
+                            //personnages.add(new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance)));
+
+                            personnages[index] = new Guerrier(nom, img, 10, 10, new Arme(armeName, armePuissance));
+                            System.out.println(personnages[index].toString());
+                            index++;
+
+
 
                             System.out.println("Voulez vous créer un autre Personnage ? ( oui / non ) ");
                             String keepCreateChoice = sc.nextLine();
@@ -75,7 +88,12 @@ public class main {
                             int sortPuissance = sc.nextInt();
                             sc.nextLine();
 
-                            personnages.add(new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance)));
+                            //personnages.add(new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance)));
+
+                            personnages[index] = new Magicien(nom, img, 6, 15, new Sort(sortName, sortPuissance));
+                            System.out.println(personnages[index].toString());
+                            index++;
+
 
                             System.out.println("Voulez vous créer un autre Personnage ? ( oui / non ) ");
                             String keepCreateChoice = sc.nextLine();
@@ -86,13 +104,14 @@ public class main {
                         }
                     }
                     break;
-                case 2:
+                /*case 2:
                     System.out.println("Liste des personnages :");
 
-                    for (int i = 0; i < personnages.size(); i++) {
-                        System.out.print("(id = " + i + ") ");
-                        System.out.println(personnages.get(i));
-                    }
+                        for (int i = 0; i < personnages.size(); i++) {
+                            System.out.print("(id = " + i + ") ");
+                            System.out.println(personnages.get(i));
+                        }
+
                     break;
                 case 3:
                     System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.size() - 1) + ")");
@@ -126,7 +145,7 @@ public class main {
                     break;
                 case 4:
                     playGame = false;
-                    break;
+                    break;*/
             }
             System.out.println();
         }

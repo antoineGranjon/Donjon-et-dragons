@@ -2,8 +2,8 @@ package DungeonAndDragon;
 
 public class Sort {
 
-    public String nom;
-    public int puissance;
+    private String nom;
+    private int puissance;
 
     public Sort(String nom, int puissance){
         this.nom = nom;

@@ -2,8 +2,8 @@ package DungeonAndDragon;
 
 public class Arme {
 
-    public String nom;
-    public int puissance;
+    private String nom;
+    private int puissance;
 
     public Arme(String nom, int puissance){
         this.nom = nom;
