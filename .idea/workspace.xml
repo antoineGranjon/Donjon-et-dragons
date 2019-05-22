@@ -2,20 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a389885b-e081-45f5-b7ec-44129a11fceb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Arme.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Arme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Guerrier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Magicien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Magicien.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Personnage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Arme.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Arme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Fenetre.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Fenetre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Guerrier.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Guerrier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Magicien.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Magicien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Personnage.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Personnage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/Sort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/DungeonAndDragon/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/package-list" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Arme.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Fenetre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Guerrier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Magicien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Personnage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/Sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/D&amp;D/DungeonAndDragon/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Arme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Arme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Fenetre.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dungeonanddragons/Fenetre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dungeonanddragons/Fenetre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Guerrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Guerrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Magicien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Magicien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Personnage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Sort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/personnages/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dungeonanddragons/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dungeonanddragons/main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,113 +64,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dungeonanddragons/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="927">
+              <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6586#6598#0" expanded="true" />
+                <element signature="docComment;method#displayArrayList#0;class#main#0" />
+                <element signature="docComment;method#displayList#0;class#main#0" />
+                <element signature="docComment;method#keepCreating#0;class#main#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Personnage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="360">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
+                <element signature="docComment;method#Personnage#2;class#Personnage#0" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Guerrier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="165">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#702#703#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding>
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
+                <element signature="docComment;method#Guerrier#0;class#Guerrier#0" />
                 <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Arme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
+                <element signature="docComment;method#Arme#0;class#Arme#0" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Magicien.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="docComment;method#Magicien#0;class#Magicien#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Sort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="docComment;method#Sort#0;class#Sort#0" />
               </folding>
             </state>
           </provider>
@@ -162,14 +171,26 @@
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/fighter.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Fenetre.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/personnage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java" />
         <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/personnages/Guerrier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/personnages/Magicien.java" />
+        <option value="$PROJECT_DIR$/src/main/java/personnages/Personnage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/TestException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/EntierException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dungeonanddragons/main.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1845" />
@@ -183,7 +204,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,10 +211,37 @@
               <item name="D&amp;D" type="b2602c69:ProjectViewProjectNode" />
               <item name="D&amp;D" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="D&amp;D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D&amp;D" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D&amp;D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D&amp;D" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D&amp;D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D&amp;D" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D&amp;D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D&amp;D" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,10 +251,16 @@
     <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-openjdk-amd64/docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/Classes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,13 +274,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DungeonAndDragon.main" />
+      <option name="MAIN_CLASS_NAME" value="dungeonanddragons.main" />
       <module name="D&amp;D" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DungeonAndDragon.*" />
+          <option name="PATTERN" value="dungeonanddragons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -240,8 +293,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.main" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -261,19 +314,20 @@
       <workItem from="1558016258674" duration="606000" />
       <workItem from="1558073907228" duration="21729000" />
       <workItem from="1558333310265" duration="21012000" />
-      <workItem from="1558420283936" duration="19199000" />
+      <workItem from="1558420283936" duration="20752000" />
+      <workItem from="1558505918397" duration="22303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62546000" />
+    <option name="totallyTimeSpent" value="86402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="992" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.11045891" />
-      <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" weight="0.13500534" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496875" visible="true" weight="0.15314835" />
+      <window_info id="Structure" order="1" sideWeight="0.503125" side_tool="true" weight="0.17662753" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -281,15 +335,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35163552" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39252338" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2593458" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47313085" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943925" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23426573" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23364486" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32943925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -297,9 +351,9 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32977587" />
       <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
@@ -309,7 +363,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/fighter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Arme.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Fenetre.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dungeonanddragons/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
@@ -341,103 +395,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Guerrier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Arme.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Exception.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/EntierException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
           <folding>
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#97#98#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Arme.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/TestException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="75">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Magicien.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Personnage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="360">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
+            <element signature="docComment;method#Personnage#2;class#Personnage#0" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Guerrier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="docComment;method#Guerrier#0;class#Guerrier#0" />
             <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Sort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Arme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="165">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
+            <element signature="docComment;method#Arme#0;class#Arme#0" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/Personnage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Magicien.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="195">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
+            <element signature="docComment;method#Magicien#0;class#Magicien#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DungeonAndDragon/main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/personnages/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="docComment;method#Sort#0;class#Sort#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dungeonanddragons/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="182" column="54" selection-start-line="182" selection-start-column="54" selection-end-line="182" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6586#6598#0" expanded="true" />
+            <element signature="docComment;method#displayArrayList#0;class#main#0" />
+            <element signature="docComment;method#displayList#0;class#main#0" />
+            <element signature="docComment;method#keepCreating#0;class#main#0" />
           </folding>
         </state>
       </provider>

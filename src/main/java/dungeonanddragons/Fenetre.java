@@ -1,4 +1,4 @@
-package DungeonAndDragon;
+package dungeonanddragons;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;

@@ -1,5 +1,7 @@
-package DungeonAndDragon;
+package personnages;
 
+
+import exception.TestException;
 
 public abstract class Personnage {
 
@@ -17,14 +19,12 @@ public abstract class Personnage {
     }
 
     /**
-     *
      * @param nom
      * @param image
      * @param vie
      * @param force
      */
     public Personnage(String nom, String image, int vie, int force) {
-
         this.nom = nom;
         this.image = image;
         this.vie = vie;
@@ -56,6 +56,6 @@ public abstract class Personnage {
     }
 
     public String toString() {
-        return "Classe : " + this.getClass().getSimpleName() + " | Nom: " + nom + " | Image: " + image + "| Points de vie : " + vie + "| Force: " + force + " | ";
+        return "Classe : " + this.getClass().getSimpleName() + " | Nom: " + nom + " | Image: " + image + " | Points de vie : " + vie + " | Force: " + force + " | ";
     }
 }

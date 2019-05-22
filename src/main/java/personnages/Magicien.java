@@ -1,4 +1,6 @@
-package DungeonAndDragon;
+package personnages;
+
+import exception.TestException;
 
 public class Magicien extends Personnage {
 
@@ -13,9 +15,8 @@ public class Magicien extends Personnage {
      * @param force
      * @param sortMagicien
      */
-    public Magicien(String nom, String image, int vie, int force, Sort sortMagicien) {
+    public Magicien(String nom, String image, int vie, int force, Sort sortMagicien){
         super(nom, image, vie, force);
-        //this.nameClass = "magicien";
         this.sortMagicien = sortMagicien;
     }
 

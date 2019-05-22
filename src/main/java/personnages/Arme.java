@@ -1,4 +1,4 @@
-package DungeonAndDragon;
+package personnages;
 
 public class Arme {
 
