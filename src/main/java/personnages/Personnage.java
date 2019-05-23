@@ -1,7 +1,8 @@
+/**
+ * Classe de Gestion des personnages
+ */
+
 package personnages;
-
-
-import exception.TestException;
 
 public abstract class Personnage {
 
@@ -19,10 +20,10 @@ public abstract class Personnage {
     }
 
     /**
-     * @param nom
-     * @param image
-     * @param vie
-     * @param force
+     * @param nom Le nom du personnage
+     * @param image L'image du personnage
+     * @param vie La vie du personnage
+     * @param force La force du personnage
      */
     public Personnage(String nom, String image, int vie, int force) {
         this.nom = nom;
@@ -55,6 +56,9 @@ public abstract class Personnage {
         return force;
     }
 
+    /**
+     * @return un résumé des statistiques du personnage
+     */
     public String toString() {
         return "Classe : " + this.getClass().getSimpleName() + " | Nom: " + nom + " | Image: " + image + " | Points de vie : " + vie + " | Force: " + force + " | ";
     }

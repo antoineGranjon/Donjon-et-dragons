@@ -1,21 +1,29 @@
+/**
+ * Classe Guerrier (hérite de personnage)
+ */
+
 package personnages;
+
+import armes.Arme;
+import armes.Armes;
+import armes.Boucliers;
 
 public class Guerrier extends Personnage {
 
     private Arme armeGuerrier;
-    private String bouclier;
+    private Boucliers bouclier;
 
     /**
-     *
-     * @param nom
-     * @param image
-     * @param vie
-     * @param force
-     * @param armeGuerrier
+     * @param nom Le nom du personnage
+     * @param image L'image du personnage
+     * @param vie La vie du personnage
+     * @param force La force du personnage
      */
-    public Guerrier(String nom, String image, int vie, int force, Arme armeGuerrier) {
+    public Guerrier(String nom, String image, int vie, int force) {
         super(nom, image, vie, force);
-        this.armeGuerrier = armeGuerrier;
+        Armes random = Armes.random();
+        this.armeGuerrier = new Arme(random.getName(),random.getPuissance());
+        this.bouclier = bouclier.random();
     }
 
     @Override
@@ -30,6 +38,6 @@ public class Guerrier extends Personnage {
 
     @Override
     public String toString() {
-        return super.toString() + armeGuerrier.toString();
+        return super.toString() + armeGuerrier.toString() + bouclier.toString();
     }
 }

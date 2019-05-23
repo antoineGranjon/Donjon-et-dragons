@@ -1,16 +1,20 @@
-package personnages;
+/**
+ * Gestion des armes
+ */
 
-public class Sort {
+package armes;
+
+public class Arme {
 
     private String nom;
     private int puissance;
 
     /**
-     *
-     * @param nom
-     * @param puissance
+     * Caractéristiques de l'armes
+     * @param nom Nom de l'armes
+     * @param puissance Puissance de l'armes
      */
-    public Sort(String nom, int puissance){
+    public Arme(String nom, int puissance) {
         this.nom = nom;
         this.puissance = puissance;
     }
@@ -31,7 +35,12 @@ public class Sort {
         this.puissance = puissance;
     }
 
-    public String toString(){
-        return "Sort: " + nom + " | Puissance: " + puissance;
+    /**
+     * Description de l'armes
+     * @return une description de l'armes
+     */
+    public String toString() {
+        return "Arme: " + nom + " - Puissance: " + puissance;
     }
+
 }

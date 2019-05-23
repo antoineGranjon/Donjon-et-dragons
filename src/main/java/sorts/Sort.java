@@ -1,16 +1,19 @@
-package personnages;
+/**
+ * Gestion des sorts
+ */
+package sorts;
 
-public class Arme {
+public class Sort {
 
     private String nom;
     private int puissance;
 
     /**
-     *
-     * @param nom
-     * @param puissance
+     * Caractéristiques du sort
+     * @param nom Nom du sort
+     * @param puissance Puissance du sort
      */
-    public Arme(String nom, int puissance) {
+    public Sort(String nom, int puissance){
         this.nom = nom;
         this.puissance = puissance;
     }
@@ -31,8 +34,11 @@ public class Arme {
         this.puissance = puissance;
     }
 
-    public String toString() {
-        return "Arme: " + nom + " | Puissance: " + puissance;
+    /**
+     * Description du sort
+     * @return une description du sort
+     */
+    public String toString(){
+        return "Sort: " + nom + " - Puissance: " + puissance;
     }
-
 }

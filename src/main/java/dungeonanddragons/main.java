@@ -1,9 +1,18 @@
+/**
+ * Programme du jeu Donjons et Dragons
+ *
+ * @author Antoine Granjon
+ * @version 2.3
+ */
+
 package dungeonanddragons;
 
+import armes.Arme;
+import armes.Armes;
 import personnages.*;
 import exception.*;
+import sorts.Sort;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -30,18 +39,11 @@ public class main {
     public static void play() {
         Scanner sc = new Scanner(System.in);
 
-        Personnage[] personnages = new Personnage[20];
+        Personnage[] personnages = new Personnage[50];
 
-        personnages[0] = new Magicien("Harry", "img", 60, 150, new Sort("Ridiculus", 30));
+        int index = 0;
 
-        personnages[1] = new Guerrier("Corvo", "img", 100, 75, new Arme("Épée", 25));
-
-        int index = 2;
-
-        /*ArrayList<Personnage> personnages = new ArrayList<Personnage>();
-        Arme test = new Arme("hache", 15);
-        personnages.add(new Guerrier("Jean", "img", 10, 10, test));
-        personnages.add(new Guerrier("Edouard", "img", 10, 10, test));*/
+        /*ArrayList<Personnage> personnages = new ArrayList<Personnage>();*/
 
         boolean playGame = true;
         while (playGame == true) {
@@ -54,11 +56,9 @@ public class main {
             System.out.println("Votre choix ? (1 / 2 / 3 / 4) :");
             String menu = sc.nextLine();
 
-
             switch (menu) {
                 case "1":
                     boolean keepCreate = true;
-                    //permet de boucler pour enchainer la création de perso
                     while (keepCreate == true) {
 
                         System.out.println("Veuillez choisir votre classe ( Guerrier -> 1 / Magicien -> 2 )");
@@ -71,20 +71,21 @@ public class main {
                                 System.out.println("Veuillez saisir votre nom :");
                                 String nom = sc.nextLine();
 
-                                System.out.println("Veuillez saisir votre image :");
-                                String img = sc.nextLine();
-                                System.out.println("Veuillez saisir votre arme :");
-                                String weapon = sc.nextLine();
+                                personnages[index] = new Guerrier(nom, "img", (5 + (int) (Math.random() * ((10 - 5) + 1))), (5 + (int) (Math.random() * ((10 - 5) + 1))));
 
-                                System.out.println("Veuillez saisir la puissance de votre arme :");
-                                int power = sc.nextInt();
-                                sc.nextLine();
-
-                                //personnages.add(new Guerrier(nom, img, 10, 10, new Arme(weapon, power)));
-                                personnages[index] = new Guerrier(nom, img, 10, 10, new Arme(weapon, power));
+                                System.out.println("                .\n" +
+                                        "           .    |    .\n" +
+                                        "            \\   |   /\n" +
+                                        "        '.   \\  '  /   .'\n" +
+                                        "          '. .'```'. .'\n" +
+                                        "<>...:::::::`.......`:::::::..<>\n" +
+                                        "<>:         Bienvenue        :<>\n" +
+                                        "<>:..........................:<>\n" +
+                                        "<><><><><><><><><><><><><><><><>");
 
                                 System.out.println(personnages[index].toString());
                                 index++;
+
 
                                 while (keepAsking == true) {
                                     boolean temp[] = keepCreating(keepCreate, keepAsking);
@@ -97,8 +98,8 @@ public class main {
                                 System.out.println("Veuillez saisir votre nom :");
                                 String nomMagicien = sc.nextLine();
                                 String imgMagicien;
-                                int vieMagicien = 6;
-                                int puissanceMagicien = 15;
+                                int vieMagicien = (3 + (int) (Math.random() * ((6 - 3) + 1)));
+                                int puissanceMagicien = (8 + (int) (Math.random() * ((15 - 8) + 1)));
                                 String sort;
                                 int sortPuissance;
 
@@ -106,16 +107,7 @@ public class main {
                                     if (nomMagicien.equals("jedusor"))
                                         throw new TestException();
                                     else {
-                                        System.out.println("Veuillez saisir votre image :");
-                                        imgMagicien = sc.nextLine();
-
-
-                                        System.out.println("Veuillez saisir le nom de votre sort :");
-                                        sort = sc.nextLine();
-
-                                        System.out.println("Veuillez saisir la puissance de votre sort :");
-                                        sortPuissance = sc.nextInt();
-                                        sc.nextLine();
+                                        personnages[index] = new Magicien(nomMagicien, "img", vieMagicien, puissanceMagicien);
                                     }
                                 } catch (TestException e) {
                                     nomMagicien = "Voldemort";
@@ -124,10 +116,19 @@ public class main {
                                     vieMagicien = 700;
                                     puissanceMagicien = 1000;
                                     sortPuissance = 1000;
+                                    personnages[index] = new Magicien(nomMagicien, imgMagicien, vieMagicien, puissanceMagicien, new Sort(sort, sortPuissance));
+
                                 }
 
-                                //personnages.add(new Magicien(nomMagicien, imgMagicien, 6, 15, new Sort(spell, spellPower)));
-                                personnages[index] = new Magicien(nomMagicien, imgMagicien, vieMagicien, puissanceMagicien, new Sort(sort, sortPuissance));
+                                System.out.println(" / ~~~~~~~~~~~~~~~~~~~~~~~ \\\n" +
+                                        "|  /~~\\               /~~\\  |\n" +
+                                        "|\\ \\   |  Bienvenue  |   / /|\n" +
+                                        "| \\   /|             |\\   / |\n" +
+                                        "|  ~~  |             |  ~~  |\n" +
+                                        "|      |             |      |\n" +
+                                        " \\     |~~~~~~~~~~~~~|     /\n" +
+                                        "  \\   /               \\   /\n" +
+                                        "   ~~~                 ~~~");
 
                                 System.out.println(personnages[index].toString());
                                 index++;
@@ -147,13 +148,10 @@ public class main {
                     break;
                 case "2":
                     displayList(personnages);
-                    //displayArrayList(personnages);
                     break;
                 case "3":
                     displayList(personnages);
-                    //displayArrayList(personnages);
                     System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.length - 1) + ")");
-                    //System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.size() - 1) + ")");
                     int editChoice = sc.nextInt();
                     Personnage temp = personnages[editChoice];
 
@@ -205,6 +203,7 @@ public class main {
      * Méthode pour afficher la liste des perso avec une ArrayList
      *
      * @param tab
+     * @return un affichage de la liste des personnages
      */
     public static void displayArrayList(ArrayList tab) {
         System.out.println("Liste des personnages :");
@@ -216,9 +215,10 @@ public class main {
     }
 
     /**
-     * Afficher la liste des persos avec un tableau de personnage
+     * Afficher la liste des persos avec un tableau de personnages
      *
      * @param tab
+     * @return un affichage de la liste des personnages
      */
     public static void displayList(Personnage[] tab) {
         System.out.println("Liste des personnages :");
@@ -232,22 +232,14 @@ public class main {
 
             }
         }
-
-        /*for (int i = 0; i < tab.length; i++) {
-            if(tab [i] == null){
-                break;
-            }
-            System.out.print("(id = " + i + ") ");
-            System.out.println(tab[i].toString());
-        }*/
     }
 
     /**
-     * fonction qui demmande à l'utilisateur si il veux continuer de créer un perso
+     * fonction qui demande à l'utilisateur si il veux continuer de créer un perso
      *
      * @param keepCreate
      * @param keepAsking
-     * @return
+     * @return un tableau de boolean pour savoir si la boucle continue donc si on relance une création de perso
      */
     public static boolean[] keepCreating(boolean keepCreate, boolean keepAsking) {
         Scanner sc = new Scanner(System.in);
