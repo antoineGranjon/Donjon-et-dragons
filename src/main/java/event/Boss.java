@@ -1,35 +1,39 @@
-package armes;
+package event;
 
-public enum Armes {
-    triforce("Triforce",300),
-    blaspheme("Blasphème",250),
-    grandgriffe("Grand griffe", 100),
-    shisui("Shisui", 175),
-    lancepierre("Lance-pierre", 2),
-    excalibur("Excalibur",290),
-    unesouris("Une souris",5),
-    pistoletaeau("Pistolet à eau",1),
-    barbapapa("Barbapapa",0);
-
-
+public enum Boss {
+    michel("Michel le sensei", 5, 300),
+    marceline("Marceline",8,80),
+    camille("Camille",12,100),
+    toinou("Toinou la malice",42,420),
+    ;
 
     private final String name;
     private final int puissance;
+    private int vie;
 
-    Armes(String name, int puissance) {
+    Boss(String name, int puissance, int vie) {
         this.name = name;
         this.puissance = puissance;
+        this.vie = vie;
     }
 
     public int getPuissance() {
         return puissance;
     }
 
+    public int getVie() {
+        return vie;
+    }
+
+    public void setVie(int vie){
+        this.vie = vie;
+    }
+
     public String getName() {
         return name;
     }
 
-    public static Armes random() {
+    public static Boss random() {
         return values()[(int) (Math.random() * values().length)];
     }
 

@@ -1,17 +1,15 @@
 package sorts;
 
-public enum Sorts {
-    bouledefeu("Boule de feu",100),
-    sectumsempra("Sectum sempra",150),
-    ridiculus("Ridiculus", 100),
-    alohomora("Alohomora", 0);
-
-
+public enum SortsCollection {
+    spell1("Spell 1",5),
+    spell2("Spell 2",10),
+    spell3("Spell 3", 15),
+    spell4("Spell 4", 20);
 
     private final String name;
     private final int puissance;
 
-    Sorts(String name, int puissance) {
+    SortsCollection(String name, int puissance) {
         this.name = name;
         this.puissance = puissance;
     }
@@ -24,7 +22,7 @@ public enum Sorts {
         return name;
     }
 
-    public static Sorts random() {
+    public static SortsCollection random() {
         return values()[(int) (Math.random() * values().length)];
     }
 

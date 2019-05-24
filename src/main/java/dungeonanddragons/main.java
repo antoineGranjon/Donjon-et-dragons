@@ -7,12 +7,16 @@
 
 package dungeonanddragons;
 
-import armes.Arme;
-import armes.Armes;
+import armes.ArmesCollection;
+import event.Bonus;
+import event.Boss;
+import event.Ennemi;
 import personnages.*;
 import exception.*;
+import plateau.Plateau;
 import sorts.Sort;
 
+import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -33,30 +37,47 @@ public class main {
                 " |  /   V        ))       V   \\  | \n" +
                 " |/     `       //        '     \\| \n" +
                 " `              V                '");
+
         play();
+
     }
 
     public static void play() {
         Scanner sc = new Scanner(System.in);
 
-        Personnage[] personnages = new Personnage[50];
+        ArrayList<Personnage> personnages = new ArrayList<Personnage>();
+        //personnages.add(new Guerrier("Player name", "img", (5 + (int) (Math.random() * ((10 - 5) + 1))), (5 + (int) (Math.random() * ((10 - 5) + 1)))));
 
         int index = 0;
-
-        /*ArrayList<Personnage> personnages = new ArrayList<Personnage>();*/
 
         boolean playGame = true;
         while (playGame == true) {
 
             System.out.println("Donjons et dragons, menu:");
+            if (index >= 1) {
+                System.out.println("0 - Jouer !");
+            }
             System.out.println("1 - Créer un Personnage.");
             System.out.println("2 - Liste des Personnages.");
             System.out.println("3 - Modifier un Personnage.");
             System.out.println("4 - Ce jeu est nul, quitter");
-            System.out.println("Votre choix ? (1 / 2 / 3 / 4) :");
+            if (index >= 1) {
+                System.out.println("Votre choix ? (0 / 1 / 2 / 3 / 4) :");
+
+            } else {
+                System.out.println("Votre choix ? (1 / 2 / 3 / 4) :");
+
+            }
             String menu = sc.nextLine();
 
             switch (menu) {
+
+                case "0":
+                    displayArrayList(personnages);
+                    System.out.println("Choisissez votre personnage(avec l'id): ");
+                    int playerChoice = sc.nextInt();
+                    playBoard(personnages.get(playerChoice));
+                    break;
                 case "1":
                     boolean keepCreate = true;
                     while (keepCreate == true) {
@@ -71,7 +92,7 @@ public class main {
                                 System.out.println("Veuillez saisir votre nom :");
                                 String nom = sc.nextLine();
 
-                                personnages[index] = new Guerrier(nom, "img", (5 + (int) (Math.random() * ((10 - 5) + 1))), (5 + (int) (Math.random() * ((10 - 5) + 1))));
+                                personnages.add(new Guerrier(nom, "img", (15 + (int) (Math.random() * ((25 - 15) + 1))), (5 + (int) (Math.random() * ((10 - 5) + 1)))));
 
                                 System.out.println("                .\n" +
                                         "           .    |    .\n" +
@@ -83,9 +104,8 @@ public class main {
                                         "<>:..........................:<>\n" +
                                         "<><><><><><><><><><><><><><><><>");
 
-                                System.out.println(personnages[index].toString());
+                                System.out.println(personnages.get(index).toString());
                                 index++;
-
 
                                 while (keepAsking == true) {
                                     boolean temp[] = keepCreating(keepCreate, keepAsking);
@@ -98,7 +118,7 @@ public class main {
                                 System.out.println("Veuillez saisir votre nom :");
                                 String nomMagicien = sc.nextLine();
                                 String imgMagicien;
-                                int vieMagicien = (3 + (int) (Math.random() * ((6 - 3) + 1)));
+                                int vieMagicien = (10 + (int) (Math.random() * ((15 - 10) + 1)));
                                 int puissanceMagicien = (8 + (int) (Math.random() * ((15 - 8) + 1)));
                                 String sort;
                                 int sortPuissance;
@@ -107,7 +127,16 @@ public class main {
                                     if (nomMagicien.equals("jedusor"))
                                         throw new TestException();
                                     else {
-                                        personnages[index] = new Magicien(nomMagicien, "img", vieMagicien, puissanceMagicien);
+                                        personnages.add(new Magicien(nomMagicien, "img", vieMagicien, puissanceMagicien));
+                                        System.out.println(" / ~~~~~~~~~~~~~~~~~~~~~~~ \\\n" +
+                                                "|  /~~\\               /~~\\  |\n" +
+                                                "|\\ \\   |  Bienvenue  |   / /|\n" +
+                                                "| \\   /|             |\\   / |\n" +
+                                                "|  ~~  |             |  ~~  |\n" +
+                                                "|      |             |      |\n" +
+                                                " \\     |~~~~~~~~~~~~~|     /\n" +
+                                                "  \\   /               \\   /\n" +
+                                                "   ~~~                 ~~~");
                                     }
                                 } catch (TestException e) {
                                     nomMagicien = "Voldemort";
@@ -116,21 +145,27 @@ public class main {
                                     vieMagicien = 700;
                                     puissanceMagicien = 1000;
                                     sortPuissance = 1000;
-                                    personnages[index] = new Magicien(nomMagicien, imgMagicien, vieMagicien, puissanceMagicien, new Sort(sort, sortPuissance));
-
+                                    personnages.add(new Magicien(nomMagicien, imgMagicien, vieMagicien, puissanceMagicien, new Sort(sort, sortPuissance)));
+                                    System.out.println("\n" +
+                                            "       ---_ ......._-_--.\n" +
+                                            "      (|\\ /      / /| \\  \\\n" +
+                                            "      /  /     .'  -=-'   `.\n" +
+                                            "     /  /    .'             )\n" +
+                                            "   _/  /   .'        _.)   /\n" +
+                                            "  / o   o        _.-' /  .'\n" +
+                                            "  \\          _.-'    / .'*|\n" +
+                                            "   \\______.-'//    .'.' \\*|\n" +
+                                            "    \\|  \\ | //   .'.' _ |*|\n" +
+                                            "     `   \\|//  .'.'_ _ _|*|\n" +
+                                            "      .  .// .'.' | _ _ \\*|\n" +
+                                            "      \\`-|\\_/ /    \\ _ _ \\*\\\n" +
+                                            "       `/'\\__/      \\ _ _ \\*\\\n" +
+                                            "      /^|            \\ _ _ \\*\n" +
+                                            "     '  `             \\ _ _ \\\n" +
+                                            "                       \\_\n");
                                 }
 
-                                System.out.println(" / ~~~~~~~~~~~~~~~~~~~~~~~ \\\n" +
-                                        "|  /~~\\               /~~\\  |\n" +
-                                        "|\\ \\   |  Bienvenue  |   / /|\n" +
-                                        "| \\   /|             |\\   / |\n" +
-                                        "|  ~~  |             |  ~~  |\n" +
-                                        "|      |             |      |\n" +
-                                        " \\     |~~~~~~~~~~~~~|     /\n" +
-                                        "  \\   /               \\   /\n" +
-                                        "   ~~~                 ~~~");
-
-                                System.out.println(personnages[index].toString());
+                                System.out.println(personnages.get(index).toString());
                                 index++;
 
                                 while (keepAsking == true) {
@@ -147,13 +182,13 @@ public class main {
                     }
                     break;
                 case "2":
-                    displayList(personnages);
+                    displayArrayList(personnages);
                     break;
                 case "3":
-                    displayList(personnages);
-                    System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.length - 1) + ")");
+                    displayArrayList(personnages);
+                    System.out.println("Quel personnage souhaitez vous modifier ? (0-" + (personnages.size() - 1) + ")");
                     int editChoice = sc.nextInt();
-                    Personnage temp = personnages[editChoice];
+                    Personnage temp = personnages.get(editChoice);
 
                     System.out.println(temp.toString());
 
@@ -170,21 +205,18 @@ public class main {
                             System.out.println("Veuillez saisir le nouveau nom :");
                             String nom = sc.nextLine();
                             temp.setNom(nom);
+                            System.out.println("Votre nouveau nom: " + nom);
+
                             break;
                         case 2:
                             System.out.println("Veuillez saisir la nouvelle image:");
                             String img = sc.nextLine();
                             temp.setImage(img);
+                            System.out.println("Votre nouvelle image: " + img);
                             break;
                         case 3:
-                            for (int i = 0; i < personnages.length; i++) {
-                                if (i == editChoice) {
-                                    for (int j = i; j < personnages.length - 1; j++) {
-                                        personnages[j] = personnages[j + 1];
-                                    }
-                                    break;
-                                }
-                            }
+                            System.out.println("Le personnage: " + personnages.get(editChoice).getNom() + " à bien été supprimer");
+                            personnages.remove(editChoice);
                             break;
                     }
                     break;
@@ -195,6 +227,121 @@ public class main {
                 default:
                     System.out.println("!!! - Veuillez choisir un numéro valide - !!! (1 / 2 / 3 / 4) ");
                     break;
+            }
+        }
+
+    }
+
+    private static void playBoard(Personnage player) {
+        Scanner sc = new Scanner(System.in);
+        Hashtable plateau = new Hashtable();
+        String[] tab = new String[2];
+        tab[0] = "bonus";
+        tab[1] = "ennemi";
+        int pos = 0;
+        int widthBoard = 10;
+        boolean play = true;
+        String boss = "boss";
+
+        for (int i = 0; i < widthBoard; i++) {
+            String caseTableau = tab[(int) (Math.random() * tab.length)];
+            plateau.put(i, caseTableau);
+        }
+        plateau.put((widthBoard), boss);
+
+        System.out.println("Bonne chance, " + player.getNom());
+
+        while (play == true) {
+            System.out.println("===================================================================================");
+            System.out.println(player.getNom());
+            System.out.println("Vie: " + player.getVie());
+            System.out.println("Force: " + player.getForce());
+            System.out.println("Votre arme: " + player.getArme());
+
+            System.out.println("Plateau: ");
+            for (int i = 0; i < plateau.size(); i++) {
+                if (i != pos) {
+                    System.out.print(" _ ");
+                } else {
+                    System.out.print(" | ");
+                }
+            }
+            System.out.println(" ");
+
+            String event = plateau.get(pos).toString();
+
+            if (event.equals("bonus")) {
+                Bonus randomBonus = Bonus.random();
+                System.out.println("Vous êtes sur une case bonus !");
+                System.out.println("Vous obtenez une " + randomBonus.getName());
+                System.out.println("Vous gagnez " + randomBonus.getPuissance() + " puissance " + randomBonus.getVie() + " points de vie");
+                player.setVie(player.getVie()+randomBonus.getVie());
+                player.setForce(player.getForce()+randomBonus.getPuissance());
+                System.out.println("Appuyer sur Entrée pour continuer");
+
+                sc.nextLine();
+                pos++;
+            } else if (event.equals("ennemi")) {
+                Ennemi randomEnnemi = Ennemi.random();
+                int ennemyLife = randomEnnemi.getVie();
+                System.out.println("Vous êtes sur une case ennemi !");
+                System.out.println("Votre ennemi: " + randomEnnemi.getName() + " !");
+                System.out.println("Il possède " + ennemyLife + " points de vie et " + randomEnnemi.getPuissance() + " de puissance");
+
+                while (ennemyLife > 0) {
+                    int dmg = (player.getForce() + player.getArmePuissance());
+                    System.out.println("Vous infligez " + dmg + " points de dégats");
+                    System.out.println(randomEnnemi.getName() + " vous inflige " + randomEnnemi.getPuissance() + " points de dégats");
+                    player.setVie(player.getVie() - randomEnnemi.getPuissance());
+                    if(player.getVie() < 1){
+                        System.out.println("You lost");
+                        System.out.println("Tu t'es fais soulevé par " + randomEnnemi.getName());
+                        play = false;
+                        break;
+                    }
+                    ennemyLife = ennemyLife - dmg;
+                    System.out.println("Vos points de vie: " + player.getVie());
+                    System.out.println("Les points de vie de l'adversaire: " + ennemyLife);
+                    if(ennemyLife < 1 ){
+                        System.out.println("Vous avez tué " + randomEnnemi.getName() + " !");
+                    }
+
+                    System.out.println("Appuyer sur Entrée pour continuer");
+                    sc.nextLine();
+                }
+                pos++;
+            }
+            else if(event.equals("boss")){
+                Boss randomBoss = Boss.random();
+                int bossLife = randomBoss.getVie();
+                System.out.println("Vous êtes face au boss !");
+                System.out.println("Le boss " + randomBoss.getName() + " possède "+ bossLife + " points de vie et à " + randomBoss.getPuissance() + " points de force");
+
+                while (bossLife > 0) {
+                    int dmg = (player.getForce() + player.getArmePuissance());
+
+                    System.out.println("Vous infligez " + dmg + " points de dégats");
+                    System.out.println(randomBoss.getName() + " vous inflige " + randomBoss.getPuissance() + " points de dégats");
+                    player.setVie(player.getVie() - randomBoss.getPuissance());
+                    if(player.getVie() < 1){
+                        System.out.println("You lost");
+                        System.out.println("Dommage, tu viens de te faire soulevé par " + randomBoss.getName() + " comme la coupe en 98");
+                        play = false;
+                        break;
+                    }
+                    bossLife = bossLife - dmg;
+                    System.out.println("Vos points de vie: " + player.getVie());
+                    System.out.println("Les points de vie de l'adversaire: " + bossLife);
+                    if(bossLife < 1 ){
+                        System.out.println("Vous avez tué le boss " + randomBoss.getName() + " !");
+                        System.out.println("You win !");
+                    }
+
+                    System.out.println("Appuyer sur Entrée pour continuer");
+                    sc.nextLine();
+                }
+                play = false;
+                break;
             }
         }
     }

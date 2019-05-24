@@ -52,8 +52,16 @@ public abstract class Personnage {
         return vie;
     }
 
+    public void setVie(int vie) {
+        this.vie = vie;
+    }
+
     public int getForce() {
         return force;
+    }
+
+    public void setForce(int force) {
+        this.force = force;
     }
 
     /**
@@ -62,4 +70,8 @@ public abstract class Personnage {
     public String toString() {
         return "Classe : " + this.getClass().getSimpleName() + " | Nom: " + nom + " | Image: " + image + " | Points de vie : " + vie + " | Force: " + force + " | ";
     }
+
+    public abstract String getArme();
+
+    public abstract int getArmePuissance();
 }

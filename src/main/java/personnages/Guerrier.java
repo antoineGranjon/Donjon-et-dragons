@@ -5,7 +5,7 @@
 package personnages;
 
 import armes.Arme;
-import armes.Armes;
+import armes.ArmesCollection;
 import armes.Boucliers;
 
 public class Guerrier extends Personnage {
@@ -21,7 +21,7 @@ public class Guerrier extends Personnage {
      */
     public Guerrier(String nom, String image, int vie, int force) {
         super(nom, image, vie, force);
-        Armes random = Armes.random();
+        ArmesCollection random = ArmesCollection.random();
         this.armeGuerrier = new Arme(random.getName(),random.getPuissance());
         this.bouclier = bouclier.random();
     }
@@ -34,6 +34,15 @@ public class Guerrier extends Personnage {
     @Override
     public int getVie() {
         return super.getVie();
+    }
+
+    public String getArme(){
+        return armeGuerrier.toString();
+    }
+
+    @Override
+    public int getArmePuissance() {
+        return armeGuerrier.getPuissance();
     }
 
     @Override

@@ -6,7 +6,7 @@ package personnages;
 
 import sorts.Philtres;
 import sorts.Sort;
-import sorts.Sorts;
+import sorts.SortsCollection;
 
 public class Magicien extends Personnage {
 
@@ -21,16 +21,26 @@ public class Magicien extends Personnage {
      */
     public Magicien(String nom, String image, int vie, int force) {
         super(nom, image, vie, force);
-        Sorts random = Sorts.random();
+        SortsCollection random = SortsCollection.random();
         this.sortMagicien = new Sort(random.getName(), random.getPuissance());
         this.philtre = philtre.random();
     }
 
     public Magicien(String nom, String image, int vie, int force,Sort sortMagicien) {
         super(nom, image, vie, force);
-        Sorts random = Sorts.random();
+        SortsCollection random = SortsCollection.random();
         this.sortMagicien = sortMagicien;
         this.philtre = philtre.random();
+    }
+
+    @Override
+    public String getArme() {
+        return sortMagicien.toString();
+    }
+
+    @Override
+    public int getArmePuissance() {
+        return sortMagicien.getPuissance();
     }
 
     @Override
