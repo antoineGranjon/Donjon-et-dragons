@@ -1,31 +1,37 @@
-package armes;
+package event_lvl_0;
 
-public enum ArmesCollection {
-    blaspheme("Blasphème", 15),
-    shisui("Shisui", 20),
-    nike("Une paire de nike", 8),
-    lancepierre("Lance-pierre", 5),
-    unesouris("Une souris", 4),
-    barbapapa("Barbapapa", 1);
-
+public enum Boss_lvl_0 {
+    michel("Michel le sensei", 5, 300),
+    marceline("Markeline",8,80),
+    camille("Camille",12,100);
 
     private final String name;
     private final int puissance;
+    private int vie;
 
-    ArmesCollection(String name, int puissance) {
+    Boss_lvl_0(String name, int puissance, int vie) {
         this.name = name;
         this.puissance = puissance;
+        this.vie = vie;
     }
 
     public int getPuissance() {
         return puissance;
     }
 
+    public int getVie() {
+        return vie;
+    }
+
+    public void setVie(int vie){
+        this.vie = vie;
+    }
+
     public String getName() {
         return name;
     }
 
-    public static ArmesCollection random() {
+    public static Boss_lvl_0 random() {
         return values()[(int) (Math.random() * values().length)];
     }
 

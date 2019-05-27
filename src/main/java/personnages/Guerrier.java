@@ -8,7 +8,7 @@ import armes.Arme;
 import armes.ArmesCollection;
 import armes.Boucliers;
 
-public class Guerrier extends Personnage {
+public class Guerrier extends AbstractPersonnage {
 
     private Arme armeGuerrier;
     private Boucliers bouclier;

@@ -1,17 +1,16 @@
-package event;
+package event_lvl_0;
 
-public enum Boss {
+public enum Boss_lvl_1 {
     michel("Michel le sensei", 5, 300),
-    marceline("Marceline",8,80),
+    marceline("Markeline",8,80),
     camille("Camille",12,100),
-    toinou("Toinou la malice",42,420),
-    ;
+    toinou("Toinou la malice",100,500);
 
     private final String name;
     private final int puissance;
     private int vie;
 
-    Boss(String name, int puissance, int vie) {
+    Boss_lvl_1(String name, int puissance, int vie) {
         this.name = name;
         this.puissance = puissance;
         this.vie = vie;
@@ -33,7 +32,7 @@ public enum Boss {
         return name;
     }
 
-    public static Boss random() {
+    public static Boss_lvl_1 random() {
         return values()[(int) (Math.random() * values().length)];
     }
 

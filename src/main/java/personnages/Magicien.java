@@ -8,7 +8,7 @@ import sorts.Philtres;
 import sorts.Sort;
 import sorts.SortsCollection;
 
-public class Magicien extends Personnage {
+public class Magicien extends AbstractPersonnage {
 
     private Sort sortMagicien;
     private Philtres philtre;
