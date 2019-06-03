@@ -1,4 +1,4 @@
-package event_lvl_0;
+package event;
 
 public enum Ennemi_lvl_1 {
     encounter_1("NAME1", 5, 15),

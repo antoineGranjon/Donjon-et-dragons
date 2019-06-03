@@ -7,10 +7,10 @@
 
 package dungeonanddragons;
 
-import event_lvl_0.Bonus;
-import event_lvl_0.Boss_lvl_0;
-import event_lvl_0.Ennemi_lvl_0;
-import event_lvl_0.Ennemi_lvl_1;
+import event.Bonus;
+import event.Boss_lvl_0;
+import event.Boss_lvl_1;
+import event.Ennemi_lvl_0;
 import personnages.*;
 import exception.*;
 import sorts.Sort;
@@ -261,25 +261,34 @@ public class main {
         tab[0] = "bonus";
         tab[1] = "ennemi";
         int pos = 0;
-        int lvl = 0;
+        int lvl = 1;
         int widthBoard = 10;
         boolean play = true;
         String boss = "boss";
 
-        for (int i = 0; i < widthBoard; i++) {
-            String caseTableau = tab[(int) (Math.random() * tab.length)];
-            plateau.put(i, caseTableau);
-        }
-        plateau.put((widthBoard), boss);
+        remplirTab(plateau, tab, widthBoard, boss, lvl);
 
         lvl = level_0(player, sc, plateau, pos, lvl, play);
 
+        widthBoard = 20;
 
+        remplirTab(plateau, tab, widthBoard, boss, lvl);
 
+        lvl = level_0(player, sc, plateau, pos, lvl, play);
+    }
 
+    private static void remplirTab(Hashtable plateau, String[] tab, int widthBoard, String boss, int lvl) {
+        for (int i = 0; i < widthBoard; i++) {
+            if ((i == 9 && lvl == 2) || (i == 14 && lvl == 2)) {
+                String choix = "choix";
+                plateau.put(i, choix);
+            } else {
+                String caseTableau = tab[(int) (Math.random() * tab.length)];
+                plateau.put(i, caseTableau);
+            }
 
-        lvl = level_0(player,sc,plateau,pos,lvl,play);
-
+        }
+        plateau.put((widthBoard), boss);
     }
 
     private static int level_0(AbstractPersonnage player, Scanner sc, Hashtable plateau, int pos, int lvl, boolean play) {
@@ -335,21 +344,90 @@ public class main {
                     sc.nextLine();
                 }
                 pos++;
+            } else if (event.equals("choix")) {
+                switch (pos) {
+                    case 9:
+                        pos = eventNeuf(player, sc, pos);
+                        break;
+                    case 14:
+                        boolean choice = true;
+                        while (choice) {
+                            System.out.println("Vous entrez dans une pièce qui ressemble étrangement à l'intérieur du little warung");
+                            System.out.println("Que voulez vous commmander ?");
+                            System.out.println("A) Hanoï riz blanc (tmtc les bails)");
+                            System.out.println("B) Mekong riz nouilles");
+                            System.out.println("C) Aller chez big pour commander un Américain sans frite");
+                            System.out.println("D) Encore la réponse D (c'est pas une bonne idée si tu veux mon avis)");
+                            String choix = sc.nextLine();
+                            switch (choix.toLowerCase()) {
+                                case "a":
+                                    System.out.println("Un hanoï riz blanc j'vois que t'es un connaisseur, tiens tu va avancer de 2 cases et tu prends un bonus de 50 points de vie mets toi ienb mon bro ");
+                                    player.setVie(player.getVie() + 50);
+                                    pos++;
+                                    choice = false;
+                                    break;
+                                case "b":
+                                    System.out.println("Ouais pas mal mais ca vaux pas un hanoï riz blanc, tu gagnes 20 points de vie et 20 de force ");
+                                    player.setVie(player.getVie() + 20);
+                                    player.setForce(player.getVie() + 20);
+                                    pos++;
+                                    choice = false;
+                                    break;
+                                case "c":
+                                    System.out.println("Mais t'as cru qu'on étais à Valence ? T'es dans un donjon la aller -20 points de vie tu m'as saoulé");
+                                    player.setForce(player.getVie() - 20);
+                                    choice = false;
+                                    break;
+                                case "d":
+                                    System.out.println("Bien joué tu peux aller jusqu'au boss");
+                                    pos = 20;
+                                    lvl = 666;
+                                    choice = false;
+                                    break;
+                                default:
+                                    System.out.println("MAUVAIS CHOIX");
+                                    break;
+                            }
+                        }
+                        break;
+                }
+
+                System.out.println("Appuyer sur Entrée pour continuer");
+                sc.nextLine();
             } else if (event.equals("boss")) {
-                Boss_lvl_0 randomBoss = Boss_lvl_0.random();
-                int bossLife = randomBoss.getVie();
+                String bossName = "";
+                int bossPower = 0;
+                int bossLife = 0;
+
+                if (lvl == 1) {
+                    Boss_lvl_0 randomBoss = Boss_lvl_0.random();
+                    bossName = randomBoss.getName();
+                    bossPower = randomBoss.getPuissance();
+                    bossLife = randomBoss.getVie();
+                } else if (lvl == 2) {
+                    Boss_lvl_1 randomBoss = Boss_lvl_1.random();
+                    bossName = randomBoss.getName();
+                    bossPower = randomBoss.getPuissance();
+                    bossLife = randomBoss.getVie();
+                }
+                else if(lvl == 666){
+                    bossName = "La réponse D";
+                    bossPower = 666666;
+                    bossLife = 666666;
+                }
+
                 System.out.println("Vous êtes face au boss !");
-                System.out.println("Le boss " + randomBoss.getName() + " possède " + bossLife + " points de vie et à " + randomBoss.getPuissance() + " points de force");
+                System.out.println("Le boss " + bossName + " possède " + bossLife + " points de vie et à " + bossPower + " points de force");
 
                 while (bossLife > 0) {
                     int dmg = (player.getForce() + player.getArmePuissance());
 
                     System.out.println("Vous infligez " + dmg + " points de dégats");
-                    System.out.println(randomBoss.getName() + " vous inflige " + randomBoss.getPuissance() + " points de dégats");
-                    player.setVie(player.getVie() - randomBoss.getPuissance());
+                    System.out.println(bossName + " vous inflige " + bossPower + " points de dégats");
+                    player.setVie(player.getVie() - bossPower);
                     if (player.getVie() < 1) {
                         System.out.println("You lost");
-                        System.out.println("Dommage, tu viens de te faire soulevé par " + randomBoss.getName() + " comme la coupe en 98");
+                        System.out.println("Dommage, tu viens de te faire soulevé par " + bossName + " comme la coupe en 98");
                         play = false;
                         break;
                     }
@@ -357,12 +435,12 @@ public class main {
                     System.out.println("Vos points de vie: " + player.getVie());
                     System.out.println("Les points de vie de l'adversaire: " + bossLife);
                     if (bossLife < 1) {
-                        System.out.println("Vous avez tué le boss " + randomBoss.getName() + " !");
+                        System.out.println("Vous avez tué le boss " + bossName + " !");
                         System.out.println("•_•)");
                         System.out.println("( •_•)>⌐■-■");
                         System.out.println("(⌐■_■)");
                         System.out.println("You win !");
-                        System.out.println("Vous appercevez une porte derrière le cadavre de " + randomBoss.getName() + "...");
+                        System.out.println("Vous appercevez une porte derrière le cadavre de " + bossName + "...");
                         lvl++;
                     }
 
@@ -373,6 +451,68 @@ public class main {
             }
         }
         return lvl;
+    }
+
+    private static int eventNeuf(AbstractPersonnage player, Scanner sc, int pos) {
+        boolean choice = true;
+        while (choice) {
+            System.out.println("Vous entrez dans une pièce, il y a 3 coffres devant vous mais vous ne pouvez en ouvrir qu'un...");
+            System.out.println("Le quel voulez vous ouvrir ?");
+            System.out.println("A) Le premier");
+            System.out.println("B) Le deuxième");
+            System.out.println("C) Le troisième");
+            System.out.println("D) La réponse D");
+            String choix = sc.nextLine();
+            switch (choix.toLowerCase()) {
+                case "a":
+                    System.out.println("Il y a un bouton à l'intérieur, il ouvre un passage secret qui vous ammène 3 salles plus loin");
+                    pos = pos + 2;
+                    choice = false;
+                    break;
+                case "b":
+                    System.out.println("Vous trouvez un anneau qui vous octroie 15 de puissance et 15 de vie");
+                    player.setVie(player.getVie() + 15);
+                    player.setForce(player.getVie() + 15);
+                    pos++;
+                    choice = false;
+                    break;
+                case "c":
+                    boolean potion = true;
+                    while(potion == true){
+                    System.out.println("Vous trouvez une potion étrange, voulez-vous la boire ?");
+                    String choixPotion =sc.nextLine();
+                    switch (choixPotion){
+                        case"oui":
+                            System.out.println("Vous buvez la potion, vous vous sentez pas super");
+                            System.out.println("Vous perdez 15 points de force");
+                            player.setForce(player.getForce() - 15);
+                            pos++;
+                            potion = false;
+                            break;
+                        case"non":
+                            System.out.println("Vous étiez trop hésitant, la potion vous à éxploser dans les mains");
+                            System.out.println("Vous perdez 15 points de vie");
+                            player.setVie(player.getVie() - 15);
+                            pos++;
+                            potion = false;
+                            break;
+                            default:
+                                System.out.println("Mauvaise réponse");
+                                break;
+                    }}
+                    choice = false;
+                    break;
+                case "d":
+                    System.out.println("Tu trouves ça marrant ? Aller hop tu retournes au début du niveau ça t'apprendras");
+                    pos = 0;
+                    choice = false;
+                    break;
+                default:
+                    System.out.println("MAUVAIS CHOIX");
+                    break;
+            }
+        }
+        return pos;
     }
 
     /**

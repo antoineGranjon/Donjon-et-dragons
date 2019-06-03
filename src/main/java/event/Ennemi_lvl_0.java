@@ -1,4 +1,4 @@
-package event_lvl_0;
+package event;
 
 public enum Ennemi_lvl_0 {
     ungarsbourre("un gars bourré", 2, 15),

@@ -1,4 +1,4 @@
-package event_lvl_0;
+package event;
 
 public enum Bonus {
     rois("une Bénédiction des rois", 15, 15),

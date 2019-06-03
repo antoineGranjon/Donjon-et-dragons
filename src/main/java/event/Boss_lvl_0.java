@@ -1,9 +1,9 @@
-package event_lvl_0;
+package event;
 
 public enum Boss_lvl_0 {
     michel("Michel le sensei", 5, 300),
-    marceline("Markeline",8,80),
-    camille("Camille",12,100);
+    marceline("Markeline",5,80),
+    camille("Camille",6,100);
 
     private final String name;
     private final int puissance;
